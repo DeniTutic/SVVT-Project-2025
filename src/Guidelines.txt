@@ -1,0 +1,58 @@
+Tasks to Achieve :
+Login Page : Making sure that the we can login with pre-given informational and being able to logout too
+and also being able to write a wrong Password/Email to see will we get an error messages!
+--Done-- // Uploaded
+
+Register Page : Making sure we can access the Register a page and create a brand new account, ensuring
+that it's able to make one, also creating another task to try to create an account with existing information
+such as Email and Username.
+--Done-- // Uploaded
+
+Search Engine - We use the search engine to search thing such as Igman KK Burch, using the built in auto assist,
+then writing in in Lower and Upper case to see if the auto correction will work, then making the screen smaller,
+by change the w and h of the page, for some reason the search bar disappears meaning its a lack of coding.
+--Done--  // Uploaded
+
+Uredi Profile - With the user being logged in using cookies, we will try to change a few basic information
+and settings such as change their First and Last name,Gender,Year they were born,Country,Place of living,
+name on the forum,WWIN username, also we will try changing our password to a new one.
+--DONE--  // Uploaded
+
+Cookie collector - Using built-in selenium function such as get-cookies we can get cookies and using I/O
+process we store the cookies in a data file, then when needing to login we rebuild the cookies using file reader,
+rebuilding the needed cookie and then using the built in selenium cookie read we get to load our cookies and be
+logged in.
+--DONE--  // Uploaded
+
+HTTPS Checking is it secure - Simple check if the site is running on HTTPS or HTTP
+--DONE-- // Uploaded
+
+Password Reset - Trying to reset our password if we forgot or lost our previous one using Forgot password
+method.
+--DONE-- // Upload
+
+Lige/Timovi - Add different teams, removing different teams
+--DONE-- // Upload
+
+Brisanje Racuna - Checking how to delete account
+--DONE-- // Upload
+
+Commenting/Like/Dislike/Report Comments - Trying to Comment , Like a comment , dislike a comment , remove like/dislike
+and also trying to use the form to report a comment.
+--DONE-- // Upload
+
+Follow User,Block User and Unblock - Seeing what happens when a user is blocked, unblocked.
+--DONE-- // Upload
+
+Using Number links,Going through Utakmice and Igraci
+--DONE-- // Upload
+
+// Login FORUM
+--DONE-- // Upload
+
+ // Register - Forume ( nije moguce napraviti account zbog cekanja verification sa strane administartora )
+--DONE-- //Upload
+
+// Kontaktiraj administratora/icu // Test
+--DONE-- // Upload
+
