@@ -76,8 +76,8 @@ public class Cookie {
         LoginIcon.click();
         WebElement email = webDriver.findElement(By.name("email"));
         WebElement password = webDriver.findElement(By.name("password"));
-        email.sendKeys("tarik@gmail.com");
-        password.sendKeys("tarik123");
+        email.sendKeys("tarikhamzic@protonmail.com");
+        password.sendKeys("Tarik123");
         WebElement loginButton = webDriver.findElement(By.xpath("//button[@class='bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all']"));
         loginButton.click();
         // Get cookies and save them to a file

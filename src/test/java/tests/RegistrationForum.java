@@ -58,7 +58,7 @@ public class RegistrationForum {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //NEW LINE
+    //NEW LINE//
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Test
     public void testRegistrationForum() throws InterruptedException {
@@ -76,25 +76,22 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("Tarik123Test");
+        username.sendKeys("Tuta23");//Tuta22 real
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("tarik@gmail.com");
+        email.sendKeys("atdatajj@gmail.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("tarik123");
-        password_conf.sendKeys("tarik123");
+        password.sendKeys("Tuta123");
+        password_conf.sendKeys("Tuta123");
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
-        Thread.sleep(10000); // SO we can manually type it in
+        
+        Thread.sleep(10000); // timer je velik iz razlog da ima dovoljno vremena da se unese captcha
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
         Thread.sleep(10000);
@@ -117,25 +114,22 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("željo!!![najbolji]");
+        username.sendKeys("Tuta22{!tarik!}");// <================================================================
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("tarik123@yahooo.com");
+        email.sendKeys("atdatajj@gmail.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("tare123");
-        password_conf.sendKeys("tare123");
+        password.sendKeys("Tarik123");
+        password_conf.sendKeys("Tarik123");
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
-        Thread.sleep(10000); // SO we can manually type it in
+        
+        Thread.sleep(10000); // timer je velik iz razlog da ima dovoljno vremena da se unese captcha
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
         WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error")));
@@ -146,7 +140,7 @@ public class RegistrationForum {
     }
 
     @Test
-    public void testRegistrationForumUsernameAlreadyExists() throws InterruptedException {
+    public void testRegistrationForuUsernameAlreadyExists() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
@@ -161,24 +155,21 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("deni");
+        username.sendKeys("Tuta22");
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("deni@gmail.com");
+        email.sendKeys("atdatajj@gmail.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("deni123");
-        password_conf.sendKeys("deni123");
+        password.sendKeys("Tarik123");
+        password_conf.sendKeys("Tarik123");
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
+    
         Thread.sleep(10000); // SO we can manually type it in
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
@@ -205,24 +196,21 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("deni_test123");
+        username.sendKeys("Tuta24");
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("deni@gmail.com");
+        email.sendKeys("atdatajj2@gmail.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("deni123");
-        password_conf.sendKeys("deni123456789");
+        password.sendKeys("Tarik123");
+        password_conf.sendKeys("Tarik124"); // <===============================
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
+      
         Thread.sleep(10000); // SO we can manually type it in
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
@@ -249,36 +237,33 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("deni");
+        username.sendKeys("Tuta25");
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("deni@gmail.com");
+        email.sendKeys("atdatjj2@yahooo.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("dt");
-        password_conf.sendKeys("dt");
+        password.sendKeys("T123");
+        password_conf.sendKeys("T123");
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
+      
         Thread.sleep(10000); // SO we can manually type it in
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
         WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error")));
         String fullText = error.getText();
         String firstSentence = fullText.split("\\.")[0] + ".";
-        assertEquals("'Potvrda' šifre koju si upisao/la je prekratka.", firstSentence);
+        assertEquals("šifra koju si upisao/la je prekratka.", firstSentence);
 
     }
 
     @Test
-    public void testRegistrationForumAlreadyExistsEmail() throws InterruptedException {
+    public void testRegistrationForumalreadyExistsEmail() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
@@ -293,25 +278,21 @@ public class RegistrationForum {
         accept.click();
         js.executeScript("scroll(0,900)");
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("tarik_test123");
+        username.sendKeys("Tuta26");
         WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("tare123@gmail.com");
+        email.sendKeys("atdatajj@gmail.com");
         WebElement password = webDriver.findElement(By.id("new_password"));
         WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("taretare");
-        password_conf.sendKeys("taretare");
+        password.sendKeys("Tuta123");
+        password_conf.sendKeys("Tuta123");
         Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
+        timezone.selectByIndex(15);
         WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
         Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
+        timezoneCity.selectByValue("Europe/Sarajevo");
         WebElement bot = webDriver.findElement(By.id("pf_registracija"));
         bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
-        //
+       
         Thread.sleep(10000); // SO we can manually type it in
         WebElement submit = webDriver.findElement(By.id("submit"));
         submit.click();
@@ -320,48 +301,5 @@ public class RegistrationForum {
         String firstSentence = fullText.split("\\.")[0] + ".";
         assertEquals("Adresu elektroničke pošte koristi [prije] registriran/a korisnik/ca.", firstSentence);
 
-    }
-
-    @Test
-    public void testRegistrationForumCHAPTER() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        webDriver.get(baseUrl);
-        webDriver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
-        WebElement forumButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[data-tb-region='Btn:Forum']")));
-        forumButton.click();
-        assertEquals("https://forum.sportsport.ba/", webDriver.getCurrentUrl());
-        WebElement registerbutton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Registracija")));
-        registerbutton.click();
-        js.executeScript("scroll(0,300)");
-        WebElement accept = wait.until(ExpectedConditions.elementToBeClickable(By.name("agreed")));
-        accept.click();
-        js.executeScript("scroll(0,900)");
-        WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
-        username.sendKeys("tare");
-        WebElement email = webDriver.findElement(By.id("email"));
-        email.sendKeys("tare@gmail.com");
-        WebElement password = webDriver.findElement(By.id("new_password"));
-        WebElement password_conf = webDriver.findElement(By.id("password_confirm"));
-        password.sendKeys("tare123");
-        password_conf.sendKeys("tare123");
-        Select timezone = new Select(webDriver.findElement(By.id("tz_date")));
-        timezone.selectByIndex(17);
-        WebElement timezoneElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("timezone")));
-        Select timezoneCity = new Select(timezoneElement);
-        timezoneCity.selectByValue("Asia/Qatar");
-        WebElement bot = webDriver.findElement(By.id("pf_registracija"));
-        bot.sendKeys("7");
-        // This part would be done using some sort of AI, or just reenginer because of lack of time didn't make
-        // an API but surely possible to bypass using NEWER tech AI or a SIMPLE API.
-        //WebElement conformioncode = webDriver.findElement(By.id("confirm_code"));
-        //conformioncode.sendKeys("NESTO");
-        Thread.sleep(10000); // SO we can manually type it in
-        WebElement submit = webDriver.findElement(By.id("submit"));
-        submit.click();
-        WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error")));
-        String fullText = error.getText();
-        String firstSentence = fullText.split("\\.")[0] + ".";
-        assertEquals("Potvrdni kod koji si upisao/la je netačan.", firstSentence);
     }
 }

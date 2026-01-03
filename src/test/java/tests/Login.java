@@ -66,8 +66,8 @@ public class Login {
         LoginIcon.click();
         WebElement email = webDriver.findElement(By.name("email"));
         WebElement password = webDriver.findElement(By.name("password"));
-        email.sendKeys("deni123@gmail.com");
-        password.sendKeys("deni123");
+        email.sendKeys("tarikhamzic@protonmail.com");
+        password.sendKeys("Tarik123");
         WebElement loginButton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         loginButton.click();
         WebElement LoginHead = webDriver.findElement(By.id("user-profile-btn"));
@@ -85,8 +85,8 @@ public class Login {
         LoginIcon.click();
         WebElement email = webDriver.findElement(By.name("email"));
         WebElement password = webDriver.findElement(By.name("password"));
-        email.sendKeys("deni@ibu.com");
-        password.sendKeys("tarik123");
+        email.sendKeys("tarikhamzic@protonmail.com");
+        password.sendKeys("Tuta123");
         WebElement loginButton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         loginButton.click();
         WebElement notmatch = webDriver.findElement(By.cssSelector("li"));

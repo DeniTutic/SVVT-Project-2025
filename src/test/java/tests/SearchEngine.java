@@ -62,27 +62,27 @@ public class SearchEngine {
         searchbar.click();
         searchbar.clear();
         searchbar.sendKeys("KK Igman ");
-        Thread.sleep(500); // -- We wait so the Search engine can suggest the correc thing
+        Thread.sleep(500); // -- cekamo da search engine predlozi
         searchbar.sendKeys("Burch");
         Thread.sleep(2000);
-        String chucknoris = webDriver.getTitle();
-        String ExpectedOutcome = "KK Igman Burch - SportSport.ba";
-        assertEquals(ExpectedOutcome,chucknoris,"Failed");
+        String actualTitle = webDriver.getTitle();
+        String expectedTitle = "KK Igman Burch - SportSport.ba";
+        assertEquals(expectedTitle, actualTitle, "Failed");
     }
     @Test
-    public void SearchEngineCapitalizeLetters() throws InterruptedException{
+    public void SearchEngineCapitalletters() throws InterruptedException{
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         WebElement searchbar = webDriver.findElement(By.id("search-input"));
         searchbar.click();
         searchbar.clear();
         searchbar.sendKeys("kK iGMan ");
-        Thread.sleep(500); // -- We wait so the Search engine can suggest the correct thing
+        Thread.sleep(500); // -- 
         searchbar.sendKeys("buRCH");
         Thread.sleep(2000);
-        String lebron = webDriver.getTitle();
-        String ExpectedOutcome = "KK Igman Burch - SportSport.ba";
-        assertEquals(ExpectedOutcome,lebron,"Failed");
+        String actualTitle = webDriver.getTitle();
+        String expectedTitle = "KK Igman Burch - SportSport.ba";
+        assertEquals(expectedTitle, actualTitle, "Failed");
     }
     @Test
     public void SearchEnginePaste() throws InterruptedException{
@@ -96,9 +96,9 @@ public class SearchEngine {
         Thread.sleep(500);
         searchButton.click();
         Thread.sleep(2000);
-        String chucknoris = webDriver.getTitle();
-        String ExpectedOutcome = "FK Sarajevo - SportSport.ba";
-        assertEquals(ExpectedOutcome,chucknoris,"Failed");
+        String actualTitle = webDriver.getTitle();
+        String expectedTitle = "Pretraga - SportSport.ba";
+        assertEquals(expectedTitle, actualTitle, "Failed");
     }
     @Test
     public void SearchEnginePhone() throws InterruptedException{
@@ -106,20 +106,20 @@ public class SearchEngine {
         webDriver.manage().window().setSize(new Dimension(400, 701));
         webDriver.get(baseUrl);
         Thread.sleep(20000);
-        WebElement hamburgerBar = webDriver.findElement(By.id("hamburger-btn"));
-        hamburgerBar.click();
+        WebElement hambugrgerbar = webDriver.findElement(By.id("hamburger-btn"));
         WebElement searchbar = webDriver.findElement(By.id("search-input"));
         WebElement searchButton = webDriver.findElement(By.cssSelector("button[type=submit]"));
+        hambugrgerbar.click();
         Thread.sleep(1500);
         searchbar.click();
         searchbar.sendKeys("FK Sarajevo");
         Thread.sleep(500);
         searchButton.click();
-        Thread.sleep(2000); // -- Waiting so the site can load ( we will change to wait command )
-        String chucknoris = webDriver.getTitle();
-        String ExpectedOutcome = "FK Sarajevo - SportSport.ba";
-        assertEquals(ExpectedOutcome,chucknoris,"Failed");
-        //Failed test when we make the screen smaller the Search engine bar disappears and not able to use it
+        Thread.sleep(2000); 
+        String actualTitle = webDriver.getTitle();
+        String expectedTitle = "FK Sarajevo - SportSport.ba";
+        assertEquals(expectedTitle, actualTitle, "Failed");
+        // u slucaj kad se smanji secreen hamburher menu ne radi pa treba kliknuti na search ikonicu
 
     }
 }

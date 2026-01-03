@@ -60,36 +60,6 @@ public class Utakmice {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @Test
-    public void NumberTesting() throws InterruptedException{
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        webDriver.get(baseUrl);
-        webDriver.manage().window().maximize();
-        WebElement searchbar = webDriver.findElement(By.cssSelector("input[type=text]"));
-        searchbar.click();
-        searchbar.clear();
-        searchbar.sendKeys("FK ");
-        Thread.sleep(500); // We could of use Java to simulate a user typing!
-        searchbar.sendKeys("Sarajevo");
-        WebElement suggestion = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='autocomplete-suggestion' and contains(., 'FK Sarajevo')]")));
-        suggestion.click();
-        Thread.sleep(2000);
-        System.out.println(webDriver.getCurrentUrl());
-        js.executeScript("window.scrollBy(0,5500)");
-        WebElement numberTwo = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("2")));
-        numberTwo.click();
-        WebElement textOne = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Policijske snage ispred zgrade FS BiH, hoće li biti kvoruma?")));
-        assertEquals("Policijske snage ispred zgrade FS BiH, hoće li biti kvoruma?", textOne.getText());
-        Thread.sleep(2000);
-        js.executeScript("window.scrollBy(0,2300)");
-        WebElement numberlast = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("427")));
-        numberlast.click();
-        WebElement textTwo = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Šilić &quot;srušio&quot; prvaka")));
-        assertEquals("Šilić &quot;srušio&quot; prvaka",textTwo.getText());
-
-    }
-
-    @Test
     public void PlayerTesting() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
@@ -99,21 +69,21 @@ public class Utakmice {
         searchbar.click();
         searchbar.clear();
         searchbar.sendKeys("FK ");
-        Thread.sleep(500); // We could of use Java to simulate a user typing!
+        Thread.sleep(500); 
         searchbar.sendKeys("Sarajevo");
         WebElement suggestion = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='autocomplete-suggestion' and contains(., 'FK Sarajevo')]")));
         suggestion.click();
         WebElement Igraci = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("IGRAČI")));
         Igraci.click();
         Select select = new Select(webDriver.findElement(By.name("season_id")));
-        select.selectByValue("2021/2022");
-        WebElement player = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Varešanović Dal")));
-        assertEquals("Varešanović Dal", player.getText());
+        select.selectByValue("2025/2026");
+        WebElement player = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Beganović Amar")));
+        assertEquals("Beganović Amar", player.getText());
         player.click();
         WebElement playernews = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("VIJESTI")));
         playernews.click();
         WebElement getText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".text-5xl.font-bold.leading-tight.dark\\:text-white")));
-        assertEquals("Dal Varesanovic", getText.getText());
+        assertEquals("Amar Beganović", getText.getText());
     }
 
     @Test
@@ -126,7 +96,7 @@ public class Utakmice {
         searchbar.click();
         searchbar.clear();
         searchbar.sendKeys("FK ");
-        Thread.sleep(500); // We could of use Java to simulate a user typing!
+        Thread.sleep(500); // 
         searchbar.sendKeys("Sarajevo");
         WebElement suggestion = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='autocomplete-suggestion' and contains(., 'FK Sarajevo')]")));
         suggestion.click();

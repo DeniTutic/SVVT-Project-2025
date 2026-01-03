@@ -69,15 +69,15 @@ public class LoginForum {
         loginButton.click();
         WebElement username = webDriver.findElement(By.id("username"));
         WebElement password = webDriver.findElement(By.id("password"));
-        username.sendKeys("denitarik");
-        password.sendKeys("dtdt123");
+        username.sendKeys("Tuta22");
+        password.sendKeys("Tuta123");
         WebElement onlinestatus = webDriver.findElement(By.id("viewonline"));
         onlinestatus.click();
         WebElement login = webDriver.findElement(By.name("login"));
         login.click();
         WebElement usernameText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.username")));
-        assertEquals("denitarik", usernameText.getText());
-    }
+        assertEquals("Tuta22", usernameText.getText());
+    }//error might occur here at the end if the account is not verified by the website admin 
 
     @Test
     public void testLoginWWrongPassword() {
@@ -91,8 +91,8 @@ public class LoginForum {
         loginButton.click();
         WebElement username = webDriver.findElement(By.id("username"));
         WebElement password = webDriver.findElement(By.id("password"));
-        username.sendKeys("denitarik");
-        password.sendKeys("dtdt1234");
+        username.sendKeys("Tuta22");
+        password.sendKeys("Tarik123");
         WebElement onlinestatus = webDriver.findElement(By.id("viewonline"));
         onlinestatus.click();
         WebElement login = webDriver.findElement(By.name("login"));
@@ -104,7 +104,7 @@ public class LoginForum {
     }
 
     @Test
-    public void testLoginNonExistingUsername() {
+    public void testLoginWNonExistingUsername() {
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
@@ -115,8 +115,8 @@ public class LoginForum {
         loginButton.click();
         WebElement username = webDriver.findElement(By.id("username"));
         WebElement password = webDriver.findElement(By.id("password"));
-        username.sendKeys("");
-        password.sendKeys("`dtdt1234");
+        username.sendKeys("Tarik22");
+        password.sendKeys("Tarik123");
         WebElement onlinestatus = webDriver.findElement(By.id("viewonline"));
         onlinestatus.click();
         WebElement login = webDriver.findElement(By.name("login"));

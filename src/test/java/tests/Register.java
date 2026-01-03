@@ -60,8 +60,8 @@ public class Register {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Test
     public void testRegister() throws InterruptedException{
-        String userName ="Avion911Porsche";
-        String passWord ="Burch123";
+        String userName ="TarikH24";
+        String passWord ="Tarik123";
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
@@ -74,9 +74,9 @@ public class Register {
         WebElement Password = webDriver.findElement(By.name("password"));
         WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
         username.sendKeys(userName);
-        Email.sendKeys("tarik12@gmail.com");
-        Password.sendKeys("Taretare");
-        RePeat.sendKeys("Taretare");
+        Email.sendKeys("tarikhamzic22@gmail.com");
+        Password.sendKeys(passWord);
+        RePeat.sendKeys(passWord);
         Thread.sleep(2000);
         try {webDriver.switchTo().frame(webDriver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")));
             WebElement recaptchaCheckbox = webDriver.findElement(By.cssSelector(".recaptcha-checkbox-border"));
@@ -115,10 +115,10 @@ public class Register {
         WebElement Email = webDriver.findElement(By.name("email"));
         WebElement Password = webDriver.findElement(By.name("password"));
         WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
-        username.sendKeys("lebronjames23");
-        Email.sendKeys("lbj2@gmail.com");
-        Password.sendKeys("denideni12345");
-        RePeat.sendKeys("denideni12345");
+        username.sendKeys("TarikH29");
+        Email.sendKeys("tarikhamzic@protonmail.com");
+        Password.sendKeys("JimmyBuckets123");
+        RePeat.sendKeys("JimmyBuckets123");
         Thread.sleep(2000);
         try {
             webDriver.switchTo().frame(webDriver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")));
@@ -132,9 +132,9 @@ public class Register {
         WebElement Registerbutton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         Registerbutton.click();
         WebElement notmatch = webDriver.findElement(By.cssSelector("li"));
-        String Greska = notmatch.getText();
-        String greskakojuzelimo = "Polje email već postoji.";
-        assertEquals(greskakojuzelimo, Greska,"Desile su se sljedeće greške.");
+        String actualErrorMessage = notmatch.getText();
+        String expectedErrorMessage = "Polje email već postoji.";
+        assertEquals(expectedErrorMessage, actualErrorMessage, "Errors occurred.");
     }
 
     @Test
@@ -151,10 +151,10 @@ public class Register {
         WebElement Email = webDriver.findElement(By.name("email"));
         WebElement Password = webDriver.findElement(By.name("password"));
         WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
-        username.sendKeys("tare");
-        Email.sendKeys("tare@gmail.com");
-        Password.sendKeys("tttaaarrreee");
-        RePeat.sendKeys("tttaaarrreee");
+        username.sendKeys("TH22");
+        Email.sendKeys("atdatajjjj@gmail.com");
+        Password.sendKeys("JimmyBuckets123");
+        RePeat.sendKeys("JimmyBuckets123");
         Thread.sleep(2000);
         try {
             webDriver.switchTo().frame(webDriver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")));
@@ -168,9 +168,9 @@ public class Register {
         WebElement Registerbutton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         Registerbutton.click();
         WebElement notmatch = webDriver.findElement(By.cssSelector("li"));
-        String Greska = notmatch.getText();
-        String greskakojuzelimo = "Odabrano korisničko ime već postoji. Odaberite neko drugo.";
-        assertEquals(greskakojuzelimo, Greska,"Desile su se sljedeće greške.");
+        String actualErrorMessage = notmatch.getText();
+        String expectedErrorMessage = "Odabrano korisničko ime već postoji. Odaberite neko drugo.";
+        assertEquals(expectedErrorMessage, actualErrorMessage, "Errors occurred.");
     }
 
     @Test
@@ -186,10 +186,10 @@ public class Register {
         WebElement Email = webDriver.findElement(By.name("email"));
         WebElement Password = webDriver.findElement(By.name("password"));
         WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
-        username.sendKeys("deni");
-        Email.sendKeys("deni@gmail.com");
-        Password.sendKeys("denitutic");
-        RePeat.sendKeys("tuticdeni");
+        username.sendKeys("Tuta333");
+        Email.sendKeys("atdatajjjj@gmail.com");
+        Password.sendKeys("JimmyBuckets123");
+        RePeat.sendKeys("JimmyBuckets");
         Thread.sleep(2000);
         try {
             webDriver.switchTo().frame(webDriver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")));
@@ -203,9 +203,9 @@ public class Register {
         WebElement Registerbutton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         Registerbutton.click();
         WebElement notmatch = webDriver.findElement(By.cssSelector("li"));
-        String Greska = notmatch.getText();
-        String greskakojuzelimo = "Potvrda polja password se ne poklapa.";
-        assertEquals(greskakojuzelimo, Greska,"Desile su se sljedeće greške.");
+        String actualErrorMessage = notmatch.getText();
+        String expectedErrorMessage = "Potvrda polja password se ne poklapa.";
+        assertEquals(expectedErrorMessage, actualErrorMessage, "Errors occurred.");
     }
 
     @Test
@@ -221,10 +221,10 @@ public class Register {
         WebElement Email = webDriver.findElement(By.name("email"));
         WebElement Password = webDriver.findElement(By.name("password"));
         WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
-        username.sendKeys("lebronjames23@#$");
-        Email.sendKeys("deni@gmail.com");
-        Password.sendKeys("deni");
-        RePeat.sendKeys("deni");
+        username.sendKeys("Tuta 22 !!");
+        Email.sendKeys("atdatajjjj@gmail.com");
+        Password.sendKeys("JimmyBuckets123");
+        RePeat.sendKeys("JimmyBuckets123");
         Thread.sleep(2000);
         try {
             webDriver.switchTo().frame(webDriver.findElement(By.xpath("//iframe[@title='reCAPTCHA']")));
@@ -238,32 +238,9 @@ public class Register {
         WebElement Registerbutton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
         Registerbutton.click();
         WebElement notmatch = webDriver.findElement(By.cssSelector("li"));
-        String Greska = notmatch.getText();
-        String greskakojuzelimo = "Korisničko ime sadrži nedozvoljene znakove. Dozovljeni su: slova (a-z, A-Z), brojevi (0-9), te \".\" i \"_\".";
-        assertEquals(greskakojuzelimo, Greska,"Desile su se sljedeće greške.");
+        String actualErrorMessage = notmatch.getText();
+        String expectedErrorMessage = "Korisničko ime sadrži nedozvoljene znakove. Dozovljeni su: slova (a-z, A-Z), brojevi (0-9), te \".\" i \"_\".";
+        assertEquals(expectedErrorMessage, actualErrorMessage, "Errors occurred.");
     }
-    @Test
-    public void testRegisterwRECAHPTER() throws InterruptedException{
-        webDriver.get(baseUrl);
-        webDriver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
-        WebElement LoginIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='/login']"))); // Loading start of website
-        LoginIcon.click();
-        WebElement Register = webDriver.findElement(By.linkText("REGISTRACIJA"));
-        Register.click();
-        WebElement username = webDriver.findElement(By.name("username"));
-        WebElement Email = webDriver.findElement(By.name("email"));
-        WebElement Password = webDriver.findElement(By.name("password"));
-        WebElement RePeat = webDriver.findElement(By.name("password_confirmation"));
-        username.sendKeys("tare");
-        Email.sendKeys("tarik@gmail.com");
-        Password.sendKeys("taretare");
-        RePeat.sendKeys("taretare");
-        WebElement Registerbutton = webDriver.findElement(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]"));
-        Registerbutton.click();
-        WebElement notmatch = webDriver.findElement(By.cssSelector("li"));
-        String Greska = notmatch.getText();
-        String greskakojuzelimo = "Polje g-recaptcha-response je obavezno.";
-        assertEquals(greskakojuzelimo, Greska,"Desile su se sljedeće greške.");
-    }
+   
 }

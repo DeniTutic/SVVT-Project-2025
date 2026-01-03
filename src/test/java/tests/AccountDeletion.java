@@ -67,7 +67,7 @@ public class AccountDeletion {
         LoginIcon.click();
         WebElement email = webDriver.findElement(By.name("email"));
         WebElement password = webDriver.findElement(By.name("password"));
-        email.sendKeys("tarikdeni@gmail.com");
+        email.sendKeys("atdatajj@gmail.com");
         password.sendKeys("Tarik123");
         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class=\"bg-black bg-opacity-5 w-full hover:bg-red-600 hover:text-white px-4 py-2 font-trebuchet rounded-md text-md uppercase font-normal dark:bg-white dark:bg-opacity-20 h-10.5 flex justify-center items-center transition-all\"]")));
         loginButton.click();
@@ -84,4 +84,4 @@ public class AccountDeletion {
         WebElement alertText = alert.findElement(By.xpath(".//span[contains(text(), 'Uspješno ste obrisali svoj nalog')]"));
         assertEquals("Uspješno ste obrisali svoj nalog.", alertText.getText(), "Alert message does not match expected text.");
     }
-}
+}//intentionaly wrong info for login to delete account

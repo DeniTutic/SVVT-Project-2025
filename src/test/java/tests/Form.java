@@ -55,10 +55,11 @@ public class Form {
 
 
     @Test
-    public void FormCompliment() throws InterruptedException {
+    public void FormComplient() throws InterruptedException {
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
+
         WebElement button = webDriver.findElement(By.xpath("//span[text()='Forum']"));
         button.click();
         js.executeScript("window.scrollBy(0,3100)");
@@ -68,10 +69,12 @@ public class Form {
         WebElement name = webDriver.findElement(By.name("name"));
         WebElement subject = webDriver.findElement(By.name("subject"));
         WebElement messages = webDriver.findElement(By.name("message"));
-        email.sendKeys("deni123@gmail.com");
-        name.sendKeys("deni");
-        subject.sendKeys("Lebron James");
-        messages.sendKeys("At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat");
+
+
+        email.sendKeys("tarikhamzic@protonmail.com");
+        name.sendKeys("Tarik");
+        subject.sendKeys("anySubject");
+        messages.sendKeys("voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat");
         WebElement button2 = webDriver.findElement(By.xpath("//button[@type='submit']"));
         //button2.click()
     }

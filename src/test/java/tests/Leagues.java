@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import util.CookieUtils;
 
-public class Leagues {
+public class Leauges {
     private static WebDriver webDriver;
     private static String baseUrl;
 
