@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import util.CookieUtils;
 
-public class Leauges {
+public class Leagues {
     private static WebDriver webDriver;
     private static String baseUrl;
 
@@ -66,6 +66,7 @@ public class Leauges {
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         CookieUtils.loadCookies(webDriver, "cookies.data");
+        Thread.sleep(30000);//NEEDD TO LOGIN FIRST!!!!!!
         WebElement button = webDriver.findElement(By.id("user-profile-btn"));
         button.click();
         Thread.sleep(2000);
@@ -90,6 +91,7 @@ public class Leauges {
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         CookieUtils.loadCookies(webDriver, "cookies.data");
+        Thread.sleep(20000);
         WebElement button = webDriver.findElement(By.id("user-profile-btn"));
         button.click();
         Thread.sleep(2000);
