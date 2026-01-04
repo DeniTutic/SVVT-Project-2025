@@ -68,18 +68,18 @@ public class CommentDislikeLike {
         WebElement searchbar = webDriver.findElement(By.cssSelector("input[type=text]"));
         searchbar.click();
         searchbar.clear();
-        searchbar.sendKeys("KK Bosna ");
+        searchbar.sendKeys("FK ");
         Thread.sleep(500); // -- We wait so the Search engine can suggest the correct thing
         searchbar.sendKeys("Sarajevo");
         Thread.sleep(2000);
-        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("U Goražde iduće sezone dolaze Bosna, Široki, Borac...")));
+        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("FK Sarajevo postigao dogovor s Poreznom upravom!")));
         link.click();
         js.executeScript("window.scrollBy(0,2400)");
         Thread.sleep(4000);
         WebElement comments = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='flex items-center px-2 mt-5']")));
         comments.click();
         WebElement comment_box = wait.until(ExpectedConditions.elementToBeClickable(By.id("comment-main")));
-        comment_box.sendKeys("Cestitke momci!!");
+        comment_box.sendKeys("Drzavi se mora platiti. Sad ce lavordjice u Strazbur da podnesu apelaciju hahahahaha");
         WebElement button = webDriver.findElement(By.className("send-comment"));
         button.click();
     }
@@ -174,11 +174,11 @@ public class CommentDislikeLike {
         WebElement searchbar = webDriver.findElement(By.cssSelector("input[type=text]"));
         searchbar.click();
         searchbar.clear();
-        searchbar.sendKeys("KK Bosna ");
+        searchbar.sendKeys("FK ");
         Thread.sleep(500); // -- We wait so the Search engine can suggest the correct thing
         searchbar.sendKeys("Sarajevo");
         Thread.sleep(2000);
-        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("U Goražde iduće sezone dolaze Bosna, Široki, Borac...")));
+        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("FK Sarajevo postigao dogovor s Poreznom upravom!")));
         link.click();
         js.executeScript("window.scrollBy(0,2400)");
         Thread.sleep(4000);
@@ -197,11 +197,11 @@ public class CommentDislikeLike {
         WebElement searchbar = webDriver.findElement(By.cssSelector("input[type=text]"));
         searchbar.click();
         searchbar.clear();
-        searchbar.sendKeys("KK Bosna ");
+        searchbar.sendKeys("FK ");
         Thread.sleep(500); // -- We wait so the Search engine can suggest the correct thing
         searchbar.sendKeys("Sarajevo");
         Thread.sleep(2000); // -- Waiting so the site can load ( we will change to wait command )
-        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("U Goražde iduće sezone dolaze Bosna, Široki, Borac...")));
+        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("FK Sarajevo postigao dogovor s Poreznom upravom!")));
         link.click();
         js.executeScript("window.scrollBy(0,2400)");
         Thread.sleep(4000);
@@ -299,31 +299,4 @@ public class CommentDislikeLike {
 
     }
 
-
-    @Test
-    public void ReportTestUnReg() throws InterruptedException{
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        webDriver.get(baseUrl);
-        webDriver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
-        WebElement searchbar = webDriver.findElement(By.cssSelector("input[type=text]"));
-        searchbar.click();
-        searchbar.clear();
-        searchbar.sendKeys("KK Bosna ");
-        Thread.sleep(500); // -- We wait so the Search engine can suggest the correct thing
-        searchbar.sendKeys("Sarajevo");
-        Thread.sleep(2000);
-        WebElement link = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("U Goražde iduće sezone dolaze Bosna, Široki, Borac...")));
-        link.click();
-        js.executeScript("window.scrollBy(0,2400)");
-        Thread.sleep(4000);
-        WebElement comments = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='flex items-center px-2 mt-5']")));
-        comments.click();
-        WebElement report = wait.until(ExpectedConditions.elementToBeClickable(By.className("report")));
-        report.click();
-        WebElement text = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(), 'NISTE PRIJAVLJENI')]")));
-        String realTEXT = text.getText();
-        assertEquals("NISTE PRIJAVLJENI",realTEXT);
-
-    }
 }

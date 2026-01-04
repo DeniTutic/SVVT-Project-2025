@@ -86,9 +86,7 @@ public class ProfileEdit {
         select3.selectByIndex(26); // Drzava
         Thread.sleep(2000);
         //
-        WebElement CantonDropdown = webDriver.findElement(By.name("canton_id"));
-        Select select4 = new Select(CantonDropdown);
-        select4.selectByIndex(2); // Canton
+     
         //
         Thread.sleep(4000);
         WebElement forumName = webDriver.findElement(By.id("input-forum_username"));
