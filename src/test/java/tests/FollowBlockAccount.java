@@ -56,7 +56,7 @@ public class FollowBlockAccount {
     //NEW LINE
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // Sadly do not want to report someone just because i might get banned because 4-5 accounts have been already banned!
+   //oprezno sa ovim testovima, ako se prebrzo klikne vise puta na follow/unfollow ili block/unblock moze doci do problema
 
     @Test
     public void FollowUnFollowUserTEST() {
