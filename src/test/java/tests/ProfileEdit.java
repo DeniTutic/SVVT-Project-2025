@@ -75,17 +75,16 @@ public class ProfileEdit {
         //
         WebElement genderDropdown = webDriver.findElement(By.name("gender"));
         Select select1 = new Select(genderDropdown);
-        select1.selectByIndex(2); // Musko
+        select1.selectByIndex(2); 
         //
         WebElement birthDropdown = webDriver.findElement(By.name("year"));
         Select select2 = new Select(birthDropdown);
-        select2.selectByValue("2004"); // 2003 value - we can change to anything that is in the list
+        select2.selectByValue("2004"); 
         //
         WebElement CountryDropdown = webDriver.findElement(By.name("country_id"));
         Select select3 = new Select(CountryDropdown);
         select3.selectByIndex(26); // Drzava
         Thread.sleep(2000);
-        //
      
         //
         Thread.sleep(4000);

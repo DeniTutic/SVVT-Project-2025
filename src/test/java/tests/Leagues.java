@@ -91,7 +91,7 @@ public class Leagues {
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         CookieUtils.loadCookies(webDriver, "cookies.data");
-        Thread.sleep(20000);
+        Thread.sleep(20000);//login if cookies expired
         WebElement button = webDriver.findElement(By.id("user-profile-btn"));
         button.click();
         Thread.sleep(2000);
